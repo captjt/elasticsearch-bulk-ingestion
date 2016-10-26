@@ -21,3 +21,36 @@ that supplies the low level features we all love for ElasticSearch.
     * Update already existing entities based on .csv data
     * Delete an entity based on .csv records
     * Update (patch) records in an entity based on .csv records
+
+## Usage
+
+Look at `demo.py` for an example use case.
+
+To create your settings from `config.py`...
+
+```python
+settings = config(
+    "./path/to/directory/filename.csv",
+    {"host":"localhost", "port":9200},
+    "twitter",
+    "tweet",
+    "tweet_id"
+)
+```
+
+From the `uploader.py` module...
+
+```python
+upload_data = read_file(
+    settings.file_url,
+    settings.index_name,
+    settings.type_name,
+    settings.id_field,
+)
+
+response = bulk_create(
+    upload_data,
+    settings.es_host,
+    settings.index_name,
+)
+```
