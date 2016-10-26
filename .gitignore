@@ -87,3 +87,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# app specific
+app.py
+tests/*
+*.csv
