@@ -1,15 +1,15 @@
 # configuration variables
 import sys as _sys
 
-from config import Config as config
-from uploader import (
+import utils.config as config
+from utils.uploader import (
     read_file,
     bulk_create,
 )
 
 
 def main(argv):
-    settings = config(
+    settings = config.Config(
         "./path/to/directory/filename.csv",
         {"host":"localhost", "port":9200},
         "twitter",
