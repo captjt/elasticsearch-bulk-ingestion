@@ -19,7 +19,7 @@ read_file function that will take in a csv's local path and return a list ready 
 def read_file(filename, index_name, type_name, id_field):
     import csv
 
-    print ('reading .csv file...')
+    print('reading .csv file...')
 
     csv_file = open(filename, 'rt', encoding='utf-8')
     reader = csv.reader(csv_file)
@@ -34,9 +34,9 @@ def read_file(filename, index_name, type_name, id_field):
         # we must create a dict for each 'record' or row from our .csv
         single_record = {}
 
-        for i in range(0, len(row)-1):
+        for i in range(0, len(row)):
             # catch if there are more values in the csv than the header allocate for
-            if (i > len(header)-1):
+            if i > len(header)-1:
                 break
             # create a dictionary for each row we are uploading
             single_record[header[i]] = row[i]
