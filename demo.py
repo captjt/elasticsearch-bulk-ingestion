@@ -13,7 +13,7 @@ def main(argv):
         "./path/to/directory/filename.csv",
         {"host":"localhost", "port":9200},
         "twitter",
-        "tweet",
+        "tweets",
         "tweet_id"
     )
 

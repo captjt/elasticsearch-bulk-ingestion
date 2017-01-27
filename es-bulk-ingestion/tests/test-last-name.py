@@ -3,11 +3,11 @@ from elasticsearch import Elasticsearch
 from config import Config as config
 
 settings = config(
-        "./students.csv",
+        "./filename.csv",
         {"host":"localhost", "port":9200},
-        "vsfs-students",
-        "document",
-        "applicant_id"
+        "twitter",
+        "tweets",
+        "tweet_id"
     )
 
 # create ES client => search
@@ -19,7 +19,7 @@ test_search = es.search(index=settings.index_name,
         body={
             "query": {
                 "match": {
-                    "key" : "value"
+                    "lastname" : "aaron"
                 }
             }
         }
