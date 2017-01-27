@@ -1,4 +1,6 @@
-# Welcome to elasticsearch-bulk-ingestion
+Welcome to elasticsearch-bulk-ingestion
+====================
+
 An [elasticsearch-py](https://github.com/elastic/elasticsearch-py) bulk data ingestion wrapper!
 
 ### Purpose
@@ -7,7 +9,8 @@ There are a lot of features and functionality I would like to build on top of th
 the near future. [elasticsearch-py](https://github.com/elastic/elasticsearch-py) is a great package
 that supplies the low level features we all love for ElasticSearch.
 
-## Goals
+Goals
+====================
 
 * To become a full fledged bulk ingestion wrapper
 * Current Functionality
@@ -22,7 +25,8 @@ that supplies the low level features we all love for ElasticSearch.
     * Delete an entity based on .csv records
     * Update (patch) records in an entity based on .csv records
 
-## Usage
+Usage
+====================
 
 Look at `demo.py` for an example use case.
 
